@@ -1,0 +1,53 @@
+.fdh{
+    background:rgb(64, 64, 239);
+}
+.sis{
+    background:red;
+}
+
+.BBDD{
+    background:yellow;
+}
+
+.Rd{
+    background:rgb(169, 106, 169);
+}
+
+.mtj{
+    background:brown;
+}
+
+.sos{
+    background:pink;
+}
+
+.py{
+    background:green;
+}
+
+.IPE{
+    background:paleturquoise
+}
+
+.recre{
+    background:olive
+}
+
+H1{
+    text-align:center;
+    color:rgb(239, 239, 243);
+}
+
+header{
+    background:rgb(105, 105, 193);
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+.pie{
+    background:rgb(105, 105, 193);
+    color:white;
+    text-align:center;
+    padding:10px;
+}
