@@ -1,5 +1,16 @@
 .box{
-    border:10px solid #0b6bd9;
-    position:fixed;
-    bottom: 0;
+    background-color: #118ef5;
+    border: 1px solid rgb(3, 3, 3);
+    padding: 15px;
+    color: white;
+    margin-top: auto;
+}
+
+.fondo{
+    border: 0px solid black;
+    padding: 150px;
+    background-image: url('FLOREJ2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: c;
 }
