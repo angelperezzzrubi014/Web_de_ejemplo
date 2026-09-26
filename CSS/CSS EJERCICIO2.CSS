@@ -1,5 +1,5 @@
 .box{
-    background-color: #0b6bd99e;
+    border:10px solid #0b6bd9;
     position:fixed;
     bottom: 0;
 }
