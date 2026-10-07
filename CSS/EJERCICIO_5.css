@@ -1,0 +1,42 @@
+
+ .hz{
+border:2px solid rgb(0, 166, 255)
+  
+ }
+
+ .body{
+  font-family:'Times New Roman', Times, serif;
+  padding: 20px;
+ }
+
+
+.horizontal {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 20px;
+  background-color:rgb(128, 125, 55);
+  color: white;
+  text-decoration: none;
+}
+
+.vertical{
+   list-style-type: none;
+  background-color:#6fd82b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   width: 90px;
+  color:white !important;
+  text-decoration: none !important;
+}
+
+.red{
+  background-color:red;
+  color:white;
+  padding: 10px;
+  text-decoration: none;
+}
