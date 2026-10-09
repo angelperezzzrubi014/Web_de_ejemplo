@@ -1,0 +1,22 @@
+body{
+    background-image: url(../IMG/IMG_6.avif);
+}
+
+
+.d1{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+   width:1000px;
+   background-color:rgb(167, 166, 166);
+   
+    }
+
+.d2{
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px;
+   width:1000px;
+   background-color:rgb(223, 223, 138);
+   
+    }

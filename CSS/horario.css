@@ -1,0 +1,50 @@
+div{
+    background-color: #fdf000;
+    border: 2px solid black;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    
+}
+
+.IPE{
+    background-color: gold;
+}
+
+.BD{
+    background-color: #00ff00;
+}
+
+.SASP{
+    background-color: #ff0000;
+}
+
+.LLMM{
+    background-color: #0000ff;
+}
+
+.IPCGS{
+    background-color: #ffff00;
+}
+
+.PAR{
+    background-color: #ff00ff;
+}
+
+.ISO{
+    background-color: #00ffff;
+}
+
+.PIMAS{
+    background-color: #ffa500;
+}
+
+.DASP{
+    background-color: #800080;
+}
+
+.FFHH{
+    background-color: #008000;
+}
