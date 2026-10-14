@@ -4,19 +4,23 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
+    
 }
 
 body {
+    
     background-color: #121212; 
     color: #ffffff;
     font-family: Arial, sans-serif;
+    
 }
 
 
 header {
-    height: 250px;
+    height: 290px;
     
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/IMG/IMG_PWEB.jpeg);
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMG/IMG_PWEB.jpeg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -32,6 +36,7 @@ header h1 {
 
 
 main {
+    color: #f1c40f;
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
@@ -47,10 +52,12 @@ section h2 {
 
 ul {
     list-style: none;
+    
 }
 
 li {
     margin-bottom: 12px;
+    
 }
 
 
