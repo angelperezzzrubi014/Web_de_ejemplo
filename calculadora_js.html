@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="CSS/Calculadora_js.css">
+</head>
+
+<body>
+
+    <div class="calculadora">
+
+        <!-- ponemos aquí la pantalla-->
+        <input type="text" id="pantalla" class="pantalla" value="0" readonly>
+
+        <!-- ponemos aquí los botones-->
+        <div class="botones">
+            <!-- Fila 1 -->
+             <button onclick="escribir('7')">7 </button>
+            <button onclick="escribir('8')">8 </button>
+            <button onclick="escribir('9')">9 </button>
+            <button onclick="dividir('/')">/</button>
+            <br>
+
+        <!-- Fila 2 -->
+            <button onclick="escribir('4')">4 </button>
+            <button onclick="escribir('5')">5 </button>
+            <button onclick="escribir('6')">6 </button>
+            <button onclick="multiplicar('*')">*</button>
+            <br>
+
+        <!-- Fila 3 -->
+            <button onclick="escribir('1')">1 </button>
+            <button onclick="escribir('2')">2 </button>
+            <button onclick="escribir('3')">3 </button>
+            <button onclick="restar('-')">-</button>
+            <br>
+
+        <!-- Fila 4 -->
+            <button onclick="borrarPantalla('C')">C </button>
+            <button onclick="escribir('0')">0 </button>
+            <br>
+
+        <!-- Fila 5 -->
+            <button onclick="calcularResultado('=')">=</button>
+            <button onclick="sumar('+')">+</button>
+            <br>
+
+        </div>
+     </div>
+
+     <!-- enlace a js-->
+        <script src="/JS/calculadora.js"></script>
+</body>
+</html>

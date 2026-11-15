@@ -1,0 +1,93 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+
+.juego-contenedor {
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.juego-contenedor h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+.juego-contenedor p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+
+.opciones-btns {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+
+.opciones-btns button {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #0f172a;
+    color: #f8fafc;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+
+.opciones-btns button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(56, 189, 248, 0.4);
+}
+
+.opciones-btns button:active {
+    transform: translateY(0);
+}
+
+
+#resultado-juego {
+    background: #000000;
+    border: 2px solid rgba(56, 189, 248, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    color: #38bdf8;
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.8);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

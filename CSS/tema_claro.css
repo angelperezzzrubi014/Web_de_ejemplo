@@ -1,0 +1,11 @@
+header,main,footer{
+    color:black;
+    background-color: white;
+}
+
+h1,h2,p{
+    color:rgba(0, 0, 0, 0.37)
+}
+body{
+    background-color:black
+}

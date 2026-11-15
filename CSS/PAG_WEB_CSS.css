@@ -1,76 +1,330 @@
- 
+ /* Reset y variables globales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;
-    
+}
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-hover: rgba(51, 65, 85, 0.9);
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    --border-color: rgba(255, 255, 255, 0.1);
 }
 
 body {
-    
-    background-color: #121212; 
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
 
-header {
-    height: 290px;
-    
-    
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../IMG/IMG_PWEB.jpeg);
+.hero-header {
+    position: relative;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('../IMG/IMG_PARK.jpg');
     background-size: cover;
     background-position: center;
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    background: var(--accent-gradient);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+
+.nav-menu {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #f1c40f; 
-    text-shadow: 2px 2px 4px #000000;
+.nav-link {
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.nav-link:hover, .nav-link.activo {
+    background: var(--accent-color);
+    color: #0f172a;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
 }
 
 
-main {
-    color: #f1c40f;
-    max-width: 800px;
+.contenedor {
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-section h2 {
-    color: #f1c40f;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
+
+
+
+.tabla-container {
+    overflow-x: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-horario {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.tabla-horario th, .tabla-horario td {
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tabla-horario th {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.tabla-horario tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
 }
 
 
-ul {
-    list-style: none;
-    
+.fila-recreo {
+    background: rgba(247, 223, 30, 0.08);
 }
 
-li {
-    margin-bottom: 12px;
-    
+.recreo-texto {
+    font-weight: 700;
+    color: #f7df1e;
+    letter-spacing: 1px;
 }
 
 
-li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.1rem;
+.badge-asir {
     display: inline-block;
-    padding: 6px 0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.badge-asir.sasf { background: rgba(56, 189, 248, 0.2); color: #38bdf8; }
+.badge-asir.ipgs { background: rgba(129, 140, 248, 0.2); color: #818cf8; }
+.badge-asir.iso  { background: rgba(74, 222, 128, 0.2); color: #4ade80; }
+.badge-asir.par  { background: rgba(244, 63, 94, 0.2); color: #f43f5e; }
+.badge-asir.fhw  { background: rgba(251, 146, 60, 0.2); color: #fb923c; }
+.badge-asir.pimas{ background: rgba(232, 121, 249, 0.2); color: #e879f9; }
+.badge-asir.dasp { background: rgba(45, 212, 191, 0.2); color: #2dd4bf; }
+.badge-asir.ffhh { background: rgba(250, 204, 21, 0.2); color: #facc15; }
+.badge-asir.llmm { background: rgba(168, 85, 247, 0.2); color: #a855f7; }
+
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 25px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tarjeta:hover {
+    background: var(--card-hover);
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tarjeta-icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.tarjeta p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
 }
 
 
-li a:hover {
-    color: #f1c40f;
-    text-decoration: underline;
+.lista-tareas {
+    list-style: none;
+}
+
+.lista-tareas li {
+    margin-bottom: 12px;
+}
+
+.lista-tareas a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.lista-tareas a:hover {
+    background: var(--card-hover);
+    border-color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --card-hover: rgba(51, 65, 85, 0.9);
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent-color: #38bdf8;
+    --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --header-overlay: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95));
+    --panel-bg: rgba(15, 23, 42, 0.6);
+    --footer-bg: rgba(15, 23, 42, 0.95);
+}
+
+
+[data-theme="light"] {
+    --bg-color: #f1f5f9;
+    --card-bg: rgba(255, 255, 255, 0.85);
+    --card-hover: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #475569;
+    --accent-color: #0284c7;
+    --accent-gradient: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+    --border-color: rgba(15, 23, 42, 0.12);
+    --header-overlay: linear-gradient(rgba(241, 245, 249, 0.88), rgba(241, 245, 249, 0.96));
+    --panel-bg: rgba(226, 232, 240, 0.8);
+    --footer-bg: #e2e8f0;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.hero-header {
+    background: var(--header-overlay), url('../IMG/IMG_PWEB.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.panel-js {
+    background: var(--panel-bg);
+}
+
+.footer-principal {
+    background: var(--footer-bg);
+}
+
+
+.btn-tema {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.badge-js {
+    background: #f7df1e;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.panel-js {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px dashed rgba(56, 189, 248, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-family: 'Courier New', monospace;
+    color: var(--text-muted);
+}
+
+
+.footer-principal {
+    text-align: center;
+    padding: 30px;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 60px;
 }
